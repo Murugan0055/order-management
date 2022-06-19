@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { defaultHeaderdata, defaultRowData } from "./defaultData";
-import { GetContentBasedonMenu } from "./GetContentBasedonMenu";
+import CreateOrder from "../createOrder/createOrder";
+import { defaultHeaderdata, defaultRowData } from "../defaultData";
+import { GetContentBasedonMenu } from "./getContentBasedonMenu";
 import "./viewAllOrder.css";
+
 const ViewAllOrder = () => {
   const menu = ["Menu 1", "Menu 2"];
   const [activeIndexMenu, setActiveIndexMenu] = React.useState(0);
+  const [iscreateMode, setIscreateMode] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState("");
   const [rowData, setRowData] = useState(defaultRowData);
   const onsearch = (e) => {
@@ -43,23 +46,39 @@ const ViewAllOrder = () => {
         </div>
       </div>
       <div className="content">
-        <div className="subHead w-95 countRow justify-sb">
-          <h2>Order Management Screen </h2>
-          <input
-            className="searchInput"
-            type="text"
-            placeholder="search by order description"
-            value={searchValue}
-            onChange={onsearch}
-          />
-        </div>
-        {GetContentBasedonMenu(
-          activeIndexMenu,
-          defaultHeaderdata,
-          rowData,
-          setRowData
+        {iscreateMode ? (
+          <CreateOrder />
+        ) : (
+          <>
+            <div className="subHead w-95 countRow justify-sb">
+              <h2>Order Management Screen </h2>
+              <input
+                className="searchInput"
+                type="text"
+                placeholder="search by order description"
+                value={searchValue}
+                onChange={onsearch}
+              />
+            </div>
+            {GetContentBasedonMenu(
+              activeIndexMenu,
+              defaultHeaderdata,
+              rowData,
+              setRowData
+            )}
+          </>
         )}
-        <button className="creatOrderButton countRow">Create New Order</button>
+
+        {!iscreateMode ? (
+          <button
+            className="creatOrderButton countRow"
+            onClick={() => setIscreateMode(true)}
+          >
+            Create New Order
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

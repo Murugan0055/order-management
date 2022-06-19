@@ -1,5 +1,5 @@
 import ErrorBoundary from "./errorHandling/ErrorHandling";
-import ViewAllOrder from "./orderManagement/viewAllOrders";
+import ViewAllOrder from "./orderManagement/viewAllOrder/viewAllOrders";
 function App() {
   return (
     <ErrorBoundary>

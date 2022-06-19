@@ -1,0 +1,52 @@
+.accordion {
+  width: 90%;
+  margin: 0.5rem 0 0.5rem 0;
+  border: 1px solid black;
+}
+.acc-top {
+  margin: 0.3rem 1rem 0.3rem 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.acc-header {
+  color: #178ddb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.acc-subheader {
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.acc-bottom {
+  margin: 0.5rem 0rem 0.2rem 0;
+  padding-left: 0.5rem;
+  border-top: 1px solid black;
+}
+.open {
+  transform: rotate(0deg);
+}
+.close {
+  transform: rotate(180deg);
+}
+.yesOrNo {
+  width: 6%;
+  margin: 0.5rem 0 0.5rem 0;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  color:#000000;
+}
+.yes{
+  width:50%;
+  text-align: center;
+  border-right: 1px solid black;
+  background-color: #178ddb;
+  color: #FFFFFF;
+}
+.no{
+  width:50%;
+  text-align: center;
+}

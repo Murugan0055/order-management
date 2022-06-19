@@ -1,5 +1,5 @@
-import { defaultHeaderdata, defaultRowData } from "./defaultData";
-import { DeleteIcon, EditIcon } from "./icons";
+import { defaultHeaderdata, defaultRowData } from "../defaultData";
+import { DeleteIcon, EditIcon } from "../icons";
 export const GetContentBasedonMenu = (
   activeIndexMenu,
   headerdata = defaultHeaderdata,
