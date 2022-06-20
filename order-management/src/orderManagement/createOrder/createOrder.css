@@ -32,3 +32,71 @@ input[type="checkbox"] {
   width: 90%;
   height: 2rem;
 }
+.selectSlidder {
+  width: 35%;
+}
+.range {
+  margin: 0.1rem 0 0 0rem;
+}
+.normalButton {
+  background-color: white;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border: 0.3px solid black;
+  cursor: pointer;
+}
+.selected {
+  background-color: #178ddb;
+  color: #ffffff;
+}
+.minus {
+  margin: 0 0 0.4rem 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  outline: none;
+}
+.plus {
+  margin: 0 0 0.5rem 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  outline: none;
+}
+.kgvalue {
+  margin: 0 0 0 1rem;
+  width: 2rem;
+  height: 1.5rem;
+  text-align: center;
+  border: 0.3px solid black;
+}
+.kgtext {
+  margin: 0 0 0 1rem;
+  color: #178ddb;
+}
+.cancel{
+ width: 45%;
+ height:2.5rem;
+ background-color: #ffe600;
+ color: #FFFFFF;
+ font-size: 1.2rem;
+ font-weight: 600;
+ border: none;
+ outline: none;
+ cursor: pointer;
+}
+.bookOrder{
+  width: 45%;
+  height:2.5rem;
+  background-color: #00ff00;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.buttonsWr{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

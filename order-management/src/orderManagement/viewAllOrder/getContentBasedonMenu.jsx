@@ -19,7 +19,7 @@ export const GetContentBasedonMenu = (
               </tr>
             </thead>
             <tbody>
-              {rowData?.map((row) => {
+              {rowData?.map((row,index) => {
                 return (
                   <tr key={row?.id}>
                     <td>{row?.id}</td>
@@ -64,7 +64,11 @@ export const GetContentBasedonMenu = (
                         <div className="pointer">
                           <EditIcon />
                         </div>
-                        <div className="pointer">
+                        <div className="pointer" onClick={()=> {
+                          const updatedRow = [...rowData];
+                          updatedRow.splice(index,1);
+                          setRowData(updatedRow);
+                        }}>
                           <DeleteIcon />
                         </div>
                       </div>

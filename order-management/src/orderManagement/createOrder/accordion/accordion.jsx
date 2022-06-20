@@ -1,6 +1,7 @@
+import { allItems } from "../../defaultData";
 import "./accordion.css";
 const Accordion = (props) => {
-  const { item, stateAllItems, setStateAllItems, index } = props;
+  const { item, stateAllItems, setStateAllItems, index ,accordionDetails} = props;
   const onOpenOrClose = () => {
     if (typeof(item.isOpen) === "boolean") {
       const updated = [...stateAllItems];
@@ -27,7 +28,7 @@ const Accordion = (props) => {
           </div>
         </div>
       </div>
-      {item.isOpen ? <div className="acc-bottom">SEC</div> : ""}
+      {item.isOpen ? <div className="acc-bottom">{accordionDetails(item,index)}</div> : ""}
     </div>
   );
 };

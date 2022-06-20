@@ -26,6 +26,7 @@ const ViewAllOrder = () => {
       ) {
         return row;
       }
+      return 0;
     });
     setRowData(filteredRowData);
   };
@@ -47,7 +48,12 @@ const ViewAllOrder = () => {
       </div>
       <div className="content">
         {iscreateMode ? (
-          <CreateOrder />
+          <CreateOrder
+            iscreateMode={iscreateMode}
+            setIscreateMode={setIscreateMode}
+            setRowData={setRowData}
+            rowData={rowData}
+          />
         ) : (
           <>
             <div className="subHead w-95 countRow justify-sb">

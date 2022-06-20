@@ -45,8 +45,10 @@
   border-right: 1px solid black;
   background-color: #178ddb;
   color: #FFFFFF;
+  cursor: pointer;
 }
 .no{
   width:50%;
   text-align: center;
+  cursor: pointer;
 }

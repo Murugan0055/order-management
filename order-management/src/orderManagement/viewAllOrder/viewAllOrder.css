@@ -9,9 +9,12 @@
   align-items: center;
   margin: 0;
   padding: 2rem 1rem 0.3rem 3rem;
+  position: sticky;
+  top:0;
+  background-color: #ffffff;
+  z-index: 1;
 }
 .content {
-  height: 90vh;
   background-color: #f1f1f183;
   margin: 0;
   padding: 0.4rem 1rem 0.3rem 3rem;
